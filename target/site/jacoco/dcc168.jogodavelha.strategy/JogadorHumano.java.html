@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JogadorHumano.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jogo da Velha</a> &gt; <a href="index.source.html" class="el_package">dcc168.jogodavelha.strategy</a> &gt; <span class="el_source">JogadorHumano.java</span></div><h1>JogadorHumano.java</h1><pre class="source lang-java linenums">package dcc168.jogodavelha.strategy;
+
+import dcc168.jogodavelha.model.Tabuleiro;
+import java.util.Scanner;
+
+/**
+ * Estratégia de jogador humano que lê jogadas do console.
+ */
+public class JogadorHumano implements EstrategiaJogador {
+    private String nome;
+    private Scanner scanner;
+
+    /**
+     * Constrói um jogador humano com nome e scanner para leitura.
+     *
+     * @param nome nome do jogador
+     * @param scanner scanner para leitura de entrada
+     */
+<span class="nc" id="L19">    public JogadorHumano(String nome, Scanner scanner) {</span>
+<span class="nc" id="L20">        this.nome = nome;</span>
+<span class="nc" id="L21">        this.scanner = scanner;</span>
+<span class="nc" id="L22">    }</span>
+
+    /**
+     * Constrói um jogador humano com nome.
+     * Usa System.in como entrada.
+     *
+     * @param nome nome do jogador
+     */
+    public JogadorHumano(String nome) {
+<span class="nc" id="L31">        this(nome, new Scanner(System.in));</span>
+<span class="nc" id="L32">    }</span>
+
+    @Override
+    public int[] fazerJogada(Tabuleiro tabuleiro, char simboloJogador) {
+        while (true) {
+            try {
+<span class="nc" id="L38">                System.out.print(nome + &quot;, digite linha (0-2): &quot;);</span>
+<span class="nc" id="L39">                int linha = scanner.nextInt();</span>
+<span class="nc" id="L40">                System.out.print(nome + &quot;, digite coluna (0-2): &quot;);</span>
+<span class="nc" id="L41">                int coluna = scanner.nextInt();</span>
+
+<span class="nc bnc" id="L43" title="All 8 branches missed.">                if (linha &lt; 0 || linha &gt;= 3 || coluna &lt; 0 || coluna &gt;= 3) {</span>
+<span class="nc" id="L44">                    System.out.println(&quot;Coordenadas fora do intervalo!&quot;);</span>
+<span class="nc" id="L45">                    continue;</span>
+                }
+
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                if (!tabuleiro.posicaoDisponivel(linha, coluna)) {</span>
+<span class="nc" id="L49">                    System.out.println(&quot;Posição já ocupada!&quot;);</span>
+<span class="nc" id="L50">                    continue;</span>
+                }
+
+<span class="nc" id="L53">                return new int[]{linha, coluna};</span>
+<span class="nc" id="L54">            } catch (Exception e) {</span>
+<span class="nc" id="L55">                System.out.println(&quot;Entrada inválida!&quot;);</span>
+<span class="nc" id="L56">                scanner.nextLine(); // limpar buffer</span>
+<span class="nc" id="L57">            }</span>
+        }
+    }
+
+    @Override
+    public String obterNome() {
+<span class="nc" id="L63">        return nome;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

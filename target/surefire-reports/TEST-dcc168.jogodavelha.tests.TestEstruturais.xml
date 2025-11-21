@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dcc168.jogodavelha.tests.TestEstruturais" time="0.27" tests="45" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/test-classes:/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/21.0.9-ms/lib"/>
+    <property name="sun.java.command" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar /workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire 2025-11-21T19-26-14_476-jvmRun1 surefire8868650027823488663tmp surefire_03842347144863771461tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/test-classes:/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/codespace"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="/usr/local/sdkman/candidates/java/21.0.9-ms"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+10-LTS"/>
+    <property name="user.name" value="codespace"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-1030-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-12574458"/>
+    <property name="localRepository" value="/home/codespace/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="21.0.9+10-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testGameStateFromCodeAguardandoJogada" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.015"/>
+  <testcase name="testCellClear" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardMarkPositionMultiple" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorCheckDrawCondition" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardIsFullFalseWithThreeMarks" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameControllerAddPlayerAndGetList" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testGameControllerGetCurrentPlayerIndex" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.005"/>
+  <testcase name="testCellIsEmptyFalse" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameControllerGetBoard" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardGetCells" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testGameControllerSetCurrentState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testConsoleViewDisplayGameState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testPlayerGetSymbol" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorIsValidStateTrueEmpty" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameControllerStartGameSetsState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardToString" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorCheckAntiDiagonal" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.003"/>
+  <testcase name="testRandomAIMakeMoveValidCoordinates" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testRandomAIMakeMoveReturnsArray" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameControllerIsGameOverTrueAfterState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorCheckDrawNoVictory" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testCellIsEmptyTrue" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testCellGetSymbolAfterSet" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorCheckMainDiagonal" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testPlayerGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameStateFromCodeVitoriaO" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameStateFromCodeVitoriaX" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testConsoleViewDisplayMessage" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.003"/>
+  <testcase name="testValidatorCheckVictoryAllColumns" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.006"/>
+  <testcase name="testPlayerIsMySymbolTrue" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testPlayerIsMySymbolFalse" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testCellToString" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameControllerIsGameOverFalseInitial" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testMinimaxAIMakeMoveReturnsValidPosition" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.086"/>
+  <testcase name="testRandomAIGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardGetCell" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testBoardGetSize" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testMinimaxAIGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorCheckVictoryAllRows" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardPositionAvailableAfterClear" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardResetClearsBoardCompletely" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameStateFromCodeEmpate" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testConsoleViewDisplayBoard" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.003"/>
+  <testcase name="testGameControllerGetCurrentState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorIsValidStateWithVictory" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+</testsuite>

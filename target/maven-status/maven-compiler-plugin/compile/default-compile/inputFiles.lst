@@ -1,0 +1,12 @@
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/strategy/IAMinimax.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/strategy/JogadorHumano.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/model/Celula.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/view/VisaoJogo.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/model/EstadoJogo.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/model/ValidadorEstado.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/model/Tabuleiro.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/controller/ControladorJogo.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/strategy/IAAleatoria.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/view/VisaoConsole.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/model/Jogador.java
+/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/src/main/java/dcc168/jogodavelha/strategy/EstrategiaJogador.java

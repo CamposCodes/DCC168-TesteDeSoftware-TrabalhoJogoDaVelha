@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ValidadorEstado.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jogo da Velha</a> &gt; <a href="index.source.html" class="el_package">dcc168.jogodavelha.model</a> &gt; <span class="el_source">ValidadorEstado.java</span></div><h1>ValidadorEstado.java</h1><pre class="source lang-java linenums">package dcc168.jogodavelha.model;
+
+/**
+ * Valida o estado do jogo e verifica as regras do Jogo da Velha.
+ */
+<span class="fc" id="L6">public class ValidadorEstado {</span>
+
+    /**
+     * Verifica se o jogador com o símbolo dado venceu.
+     *
+     * @param tabuleiro tabuleiro do jogo
+     * @param simbolo símbolo do jogador ('X' ou 'O')
+     * @return true se o jogador venceu, false caso contrário
+     */
+    public boolean verificarVitoria(Tabuleiro tabuleiro, char simbolo) {
+<span class="fc bfc" id="L16" title="All 6 branches covered.">        return verificarLinhas(tabuleiro, simbolo) || verificarColunas(tabuleiro, simbolo) || verificarDiagonais(tabuleiro, simbolo);</span>
+    }
+
+    /**
+     * Verifica vitória em linhas.
+     *
+     * @param tabuleiro tabuleiro do jogo
+     * @param simbolo símbolo do jogador
+     * @return true se há vitória em alguma linha
+     */
+    private boolean verificarLinhas(Tabuleiro tabuleiro, char simbolo) {
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        for (int i = 0; i &lt; tabuleiro.obterTamanho(); i++) {</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            if (tabuleiro.obterSimbolo(i, 0) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L29" title="All 2 branches covered.">                tabuleiro.obterSimbolo(i, 1) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">                tabuleiro.obterSimbolo(i, 2) == simbolo) {</span>
+<span class="fc" id="L31">                return true;</span>
+            }
+        }
+<span class="fc" id="L34">        return false;</span>
+    }
+
+    /**
+     * Verifica vitória em colunas.
+     *
+     * @param tabuleiro tabuleiro do jogo
+     * @param simbolo símbolo do jogador
+     * @return true se há vitória em alguma coluna
+     */
+    private boolean verificarColunas(Tabuleiro tabuleiro, char simbolo) {
+<span class="fc bfc" id="L45" title="All 2 branches covered.">        for (int j = 0; j &lt; tabuleiro.obterTamanho(); j++) {</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">            if (tabuleiro.obterSimbolo(0, j) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">                tabuleiro.obterSimbolo(1, j) == simbolo &amp;&amp; </span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">                tabuleiro.obterSimbolo(2, j) == simbolo) {</span>
+<span class="fc" id="L49">                return true;</span>
+            }
+        }
+<span class="fc" id="L52">        return false;</span>
+    }
+
+    /**
+     * Verifica vitória em diagonais.
+     *
+     * @param tabuleiro tabuleiro do jogo
+     * @param simbolo símbolo do jogador
+     * @return true se há vitória em alguma diagonal
+     */
+    private boolean verificarDiagonais(Tabuleiro tabuleiro, char simbolo) {
+        // Diagonal principal
+<span class="fc bfc" id="L64" title="All 2 branches covered.">        if (tabuleiro.obterSimbolo(0, 0) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">            tabuleiro.obterSimbolo(1, 1) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">            tabuleiro.obterSimbolo(2, 2) == simbolo) {</span>
+<span class="fc" id="L67">            return true;</span>
+        }
+        // Diagonal secundária
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (tabuleiro.obterSimbolo(0, 2) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">            tabuleiro.obterSimbolo(1, 1) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">            tabuleiro.obterSimbolo(2, 0) == simbolo) {</span>
+<span class="fc" id="L73">            return true;</span>
+        }
+<span class="fc" id="L75">        return false;</span>
+    }
+
+    /**
+     * Verifica se houve empate (tabuleiro cheio e sem vencedor).
+     *
+     * @param tabuleiro tabuleiro do jogo
+     * @return true se houve empate
+     */
+    public boolean verificarEmpate(Tabuleiro tabuleiro) {
+<span class="pc bpc" id="L85" title="2 of 6 branches missed.">        return tabuleiro.estaCheia() &amp;&amp; !verificarVitoria(tabuleiro, 'X') &amp;&amp; !verificarVitoria(tabuleiro, 'O');</span>
+    }
+
+    /**
+     * Verifica a integridade do estado do jogo.
+     * Valida que não há múltiplos vencedores.
+     *
+     * @param tabuleiro tabuleiro do jogo
+     * @return true se o estado é válido
+     */
+    public boolean ehEstadoValido(Tabuleiro tabuleiro) {
+<span class="fc" id="L96">        boolean xVence = verificarVitoria(tabuleiro, 'X');</span>
+<span class="fc" id="L97">        boolean oVence = verificarVitoria(tabuleiro, 'O');</span>
+        
+        // Não pode haver dois vencedores simultaneamente
+<span class="pc bpc" id="L100" title="1 of 4 branches missed.">        if (xVence &amp;&amp; oVence) {</span>
+<span class="nc" id="L101">            return false;</span>
+        }
+        
+        // Se X venceu, o jogo deveria ter parado
+        // Se O venceu, o jogo deveria ter parado
+        // Se há empate, o tabuleiro deve estar cheio
+        
+<span class="fc" id="L108">        return true;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

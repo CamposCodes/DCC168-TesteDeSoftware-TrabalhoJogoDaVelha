@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EstadoJogo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jogo da Velha</a> &gt; <a href="index.source.html" class="el_package">dcc168.jogodavelha.model</a> &gt; <span class="el_source">EstadoJogo.java</span></div><h1>EstadoJogo.java</h1><pre class="source lang-java linenums">package dcc168.jogodavelha.model;
+
+/**
+ * Enumeração dos possíveis estados do jogo.
+ */
+<span class="fc" id="L6">public enum EstadoJogo {</span>
+<span class="fc" id="L7">    AGUARDANDO_JOGADA(0, &quot;Aguardando Jogada&quot;),</span>
+<span class="fc" id="L8">    VITORIA_X(1, &quot;Vitória de X&quot;),</span>
+<span class="fc" id="L9">    VITORIA_O(2, &quot;Vitória de O&quot;),</span>
+<span class="fc" id="L10">    EMPATE(3, &quot;Empate&quot;),</span>
+<span class="fc" id="L11">    FIM(4, &quot;Jogo Finalizado&quot;);</span>
+
+    private final int codigo;
+    private final String descricao;
+
+    /**
+     * Constrói um estado de jogo com código e descrição.
+     *
+     * @param codigo código do estado
+     * @param descricao descrição do estado
+     */
+<span class="fc" id="L22">    EstadoJogo(int codigo, String descricao) {</span>
+<span class="fc" id="L23">        this.codigo = codigo;</span>
+<span class="fc" id="L24">        this.descricao = descricao;</span>
+<span class="fc" id="L25">    }</span>
+
+    /**
+     * Obtém o código do estado.
+     *
+     * @return código do estado
+     */
+    public int obterCodigo() {
+<span class="fc" id="L33">        return codigo;</span>
+    }
+
+    /**
+     * Obtém a descrição do estado.
+     *
+     * @return descrição do estado
+     */
+    public String obterDescricao() {
+<span class="fc" id="L42">        return descricao;</span>
+    }
+
+    /**
+     * Obtém o estado a partir de seu código.
+     *
+     * @param codigo código do estado
+     * @return estado correspondente
+     * @throws IllegalArgumentException se código inválido
+     */
+    public static EstadoJogo doCodigo(int codigo) {
+<span class="pc bpc" id="L53" title="1 of 2 branches missed.">        for (EstadoJogo estado : EstadoJogo.values()) {</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            if (estado.codigo == codigo) {</span>
+<span class="fc" id="L55">                return estado;</span>
+            }
+        }
+<span class="nc" id="L58">        throw new IllegalArgumentException(&quot;Código de estado inválido: &quot; + codigo);</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L63">        return descricao;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

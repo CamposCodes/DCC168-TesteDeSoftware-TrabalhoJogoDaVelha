@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IAAleatoria.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jogo da Velha</a> &gt; <a href="index.source.html" class="el_package">dcc168.jogodavelha.strategy</a> &gt; <span class="el_source">IAAleatoria.java</span></div><h1>IAAleatoria.java</h1><pre class="source lang-java linenums">package dcc168.jogodavelha.strategy;
+
+import dcc168.jogodavelha.model.Tabuleiro;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+/**
+ * Estratégia de jogador que faz jogadas aleatórias.
+ */
+public class IAAleatoria implements EstrategiaJogador {
+    private String nome;
+    private Random aleatorio;
+
+    /**
+     * Constrói um jogador IA aleatório.
+     *
+     * @param nome nome do jogador
+     */
+<span class="fc" id="L20">    public IAAleatoria(String nome) {</span>
+<span class="fc" id="L21">        this.nome = nome;</span>
+<span class="fc" id="L22">        this.aleatorio = new Random();</span>
+<span class="fc" id="L23">    }</span>
+
+    /**
+     * Constrói um jogador IA aleatório com seed para testes.
+     *
+     * @param nome nome do jogador
+     * @param seed seed para o gerador aleatório
+     */
+<span class="fc" id="L31">    public IAAleatoria(String nome, long seed) {</span>
+<span class="fc" id="L32">        this.nome = nome;</span>
+<span class="fc" id="L33">        this.aleatorio = new Random(seed);</span>
+<span class="fc" id="L34">    }</span>
+
+    @Override
+    public int[] fazerJogada(Tabuleiro tabuleiro, char simboloJogador) {
+<span class="fc" id="L38">        List&lt;int[]&gt; jogudasDisponiveis = obterJogudasDisponiveis(tabuleiro);</span>
+        
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (jogudasDisponiveis.isEmpty()) {</span>
+<span class="fc" id="L41">            throw new IllegalStateException(&quot;Nenhuma posição disponível no tabuleiro!&quot;);</span>
+        }
+
+<span class="fc" id="L44">        return jogudasDisponiveis.get(aleatorio.nextInt(jogudasDisponiveis.size()));</span>
+    }
+
+    /**
+     * Obtém todas as posições disponíveis no tabuleiro.
+     *
+     * @param tabuleiro tabuleiro atual
+     * @return lista de posições disponíveis [linha, coluna]
+     */
+    private List&lt;int[]&gt; obterJogudasDisponiveis(Tabuleiro tabuleiro) {
+<span class="fc" id="L54">        List&lt;int[]&gt; jogadas = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        for (int i = 0; i &lt; tabuleiro.obterTamanho(); i++) {</span>
+<span class="fc bfc" id="L56" title="All 2 branches covered.">            for (int j = 0; j &lt; tabuleiro.obterTamanho(); j++) {</span>
+<span class="fc bfc" id="L57" title="All 2 branches covered.">                if (tabuleiro.posicaoDisponivel(i, j)) {</span>
+<span class="fc" id="L58">                    jogadas.add(new int[]{i, j});</span>
+                }
+            }
+        }
+<span class="fc" id="L62">        return jogadas;</span>
+    }
+
+    @Override
+    public String obterNome() {
+<span class="fc" id="L67">        return nome;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

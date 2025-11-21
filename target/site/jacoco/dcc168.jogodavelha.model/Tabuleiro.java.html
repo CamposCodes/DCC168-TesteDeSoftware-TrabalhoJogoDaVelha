@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Tabuleiro.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jogo da Velha</a> &gt; <a href="index.source.html" class="el_package">dcc168.jogodavelha.model</a> &gt; <span class="el_source">Tabuleiro.java</span></div><h1>Tabuleiro.java</h1><pre class="source lang-java linenums">package dcc168.jogodavelha.model;
+
+/**
+ * Representa o tabuleiro do Jogo da Velha (3x3).
+ * Gerencia as células e suas marcações.
+ */
+public class Tabuleiro {
+    private static final int TAMANHO = 3;
+    private Celula[][] celulas;
+
+    /**
+     * Constrói um tabuleiro vazio.
+     */
+<span class="fc" id="L14">    public Tabuleiro() {</span>
+<span class="fc" id="L15">        celulas = new Celula[TAMANHO][TAMANHO];</span>
+<span class="fc" id="L16">        inicializarTabuleiro();</span>
+<span class="fc" id="L17">    }</span>
+
+    /**
+     * Inicializa o tabuleiro com células vazias.
+     */
+    private void inicializarTabuleiro() {
+<span class="fc bfc" id="L23" title="All 2 branches covered.">        for (int i = 0; i &lt; TAMANHO; i++) {</span>
+<span class="fc bfc" id="L24" title="All 2 branches covered.">            for (int j = 0; j &lt; TAMANHO; j++) {</span>
+<span class="fc" id="L25">                celulas[i][j] = new Celula();</span>
+            }
+        }
+<span class="fc" id="L28">    }</span>
+
+    /**
+     * Marca uma posição no tabuleiro com o símbolo do jogador.
+     *
+     * @param linha linha da posição (0-2)
+     * @param coluna coluna da posição (0-2)
+     * @param simbolo símbolo do jogador ('X' ou 'O')
+     * @throws IllegalArgumentException se coordenadas inválidas ou posição já ocupada
+     */
+    public void marcarPosicao(int linha, int coluna, char simbolo) {
+<span class="fc" id="L39">        validarCoordenadas(linha, coluna);</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (!celulas[linha][coluna].estaVazia()) {</span>
+<span class="fc" id="L41">            throw new IllegalArgumentException(&quot;Posição já ocupada!&quot;);</span>
+        }
+<span class="fc" id="L43">        celulas[linha][coluna].definirSimbolo(simbolo);</span>
+<span class="fc" id="L44">    }</span>
+
+    /**
+     * Verifica se uma posição está disponível.
+     *
+     * @param linha linha da posição (0-2)
+     * @param coluna coluna da posição (0-2)
+     * @return true se a posição está vazia, false caso contrário
+     * @throws IllegalArgumentException se coordenadas inválidas
+     */
+    public boolean posicaoDisponivel(int linha, int coluna) {
+<span class="fc" id="L55">        validarCoordenadas(linha, coluna);</span>
+<span class="fc" id="L56">        return celulas[linha][coluna].estaVazia();</span>
+    }
+
+    /**
+     * Obtém o símbolo em uma posição do tabuleiro.
+     *
+     * @param linha linha da posição (0-2)
+     * @param coluna coluna da posição (0-2)
+     * @return símbolo na posição
+     * @throws IllegalArgumentException se coordenadas inválidas
+     */
+    public char obterSimbolo(int linha, int coluna) {
+<span class="fc" id="L68">        validarCoordenadas(linha, coluna);</span>
+<span class="fc" id="L69">        return celulas[linha][coluna].obterSimbolo();</span>
+    }
+
+    /**
+     * Verifica se o tabuleiro está cheio.
+     *
+     * @return true se todas as posições estão ocupadas, false caso contrário
+     */
+    public boolean estaCheia() {
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        for (int i = 0; i &lt; TAMANHO; i++) {</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            for (int j = 0; j &lt; TAMANHO; j++) {</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">                if (celulas[i][j].estaVazia()) {</span>
+<span class="fc" id="L81">                    return false;</span>
+                }
+            }
+        }
+<span class="fc" id="L85">        return true;</span>
+    }
+
+    /**
+     * Obtém o tamanho do tabuleiro.
+     *
+     * @return tamanho do tabuleiro (3)
+     */
+    public int obterTamanho() {
+<span class="fc" id="L94">        return TAMANHO;</span>
+    }
+
+    /**
+     * Limpa o tabuleiro (reseta todas as células).
+     */
+    public void reiniciar() {
+<span class="fc" id="L101">        inicializarTabuleiro();</span>
+<span class="fc" id="L102">    }</span>
+
+    /**
+     * Valida se as coordenadas estão dentro dos limites do tabuleiro.
+     *
+     * @param linha linha da posição
+     * @param coluna coluna da posição
+     * @throws IllegalArgumentException se coordenadas estão fora dos limites
+     */
+    private void validarCoordenadas(int linha, int coluna) {
+<span class="fc bfc" id="L112" title="All 8 branches covered.">        if (linha &lt; 0 || linha &gt;= TAMANHO || coluna &lt; 0 || coluna &gt;= TAMANHO) {</span>
+<span class="fc" id="L113">            throw new IllegalArgumentException(&quot;Coordenadas inválidas: (&quot; + linha + &quot;, &quot; + coluna + &quot;)&quot;);</span>
+        }
+<span class="fc" id="L115">    }</span>
+
+    /**
+     * Obtém uma cópia da célula em uma posição.
+     *
+     * @param linha linha da posição
+     * @param coluna coluna da posição
+     * @return célula na posição
+     * @throws IllegalArgumentException se coordenadas inválidas
+     */
+    public Celula obterCelula(int linha, int coluna) {
+<span class="fc" id="L126">        validarCoordenadas(linha, coluna);</span>
+<span class="fc" id="L127">        return celulas[linha][coluna];</span>
+    }
+
+    /**
+     * Obtém todas as células do tabuleiro.
+     *
+     * @return matriz de células
+     */
+    public Celula[][] obterCelulas() {
+<span class="fc" id="L136">        return celulas;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="fc" id="L141">        StringBuilder sb = new StringBuilder();</span>
+<span class="fc bfc" id="L142" title="All 2 branches covered.">        for (int i = 0; i &lt; TAMANHO; i++) {</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">            for (int j = 0; j &lt; TAMANHO; j++) {</span>
+<span class="fc" id="L144">                sb.append(&quot; &quot;).append(celulas[i][j].obterSimbolo()).append(&quot; &quot;);</span>
+<span class="fc bfc" id="L145" title="All 2 branches covered.">                if (j &lt; TAMANHO - 1) {</span>
+<span class="fc" id="L146">                    sb.append(&quot;|&quot;);</span>
+                }
+            }
+<span class="fc" id="L149">            sb.append(&quot;\n&quot;);</span>
+<span class="fc bfc" id="L150" title="All 2 branches covered.">            if (i &lt; TAMANHO - 1) {</span>
+<span class="fc" id="L151">                sb.append(&quot;-----------\n&quot;);</span>
+            }
+        }
+<span class="fc" id="L154">        return sb.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

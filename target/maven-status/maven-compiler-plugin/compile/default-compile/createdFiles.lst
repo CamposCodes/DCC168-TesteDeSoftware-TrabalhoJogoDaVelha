@@ -1,0 +1,12 @@
+dcc168/jogodavelha/model/Tabuleiro.class
+dcc168/jogodavelha/controller/ControladorJogo.class
+dcc168/jogodavelha/strategy/JogadorHumano.class
+dcc168/jogodavelha/view/VisaoJogo.class
+dcc168/jogodavelha/model/Celula.class
+dcc168/jogodavelha/strategy/IAMinimax.class
+dcc168/jogodavelha/model/EstadoJogo.class
+dcc168/jogodavelha/strategy/EstrategiaJogador.class
+dcc168/jogodavelha/strategy/IAAleatoria.class
+dcc168/jogodavelha/model/ValidadorEstado.class
+dcc168/jogodavelha/view/VisaoConsole.class
+dcc168/jogodavelha/model/Jogador.class

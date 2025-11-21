@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IAMinimax.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Jogo da Velha</a> &gt; <a href="index.source.html" class="el_package">dcc168.jogodavelha.strategy</a> &gt; <span class="el_source">IAMinimax.java</span></div><h1>IAMinimax.java</h1><pre class="source lang-java linenums">package dcc168.jogodavelha.strategy;
+
+import dcc168.jogodavelha.model.Tabuleiro;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Estratégia de jogador com algoritmo Minimax.
+ * Implementa IA forte que busca ganhar ou empatar.
+ */
+public class IAMinimax implements EstrategiaJogador {
+    private String nome;
+
+    /**
+     * Constrói um jogador IA com Minimax.
+     *
+     * @param nome nome do jogador
+     */
+<span class="fc" id="L19">    public IAMinimax(String nome) {</span>
+<span class="fc" id="L20">        this.nome = nome;</span>
+<span class="fc" id="L21">    }</span>
+
+    @Override
+    public int[] fazerJogada(Tabuleiro tabuleiro, char simboloJogador) {
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">        char simboloOponente = simboloJogador == 'X' ? 'O' : 'X';</span>
+<span class="fc" id="L26">        int melhorScore = Integer.MIN_VALUE;</span>
+<span class="fc" id="L27">        int[] melhorJogada = null;</span>
+
+<span class="fc" id="L29">        List&lt;int[]&gt; jogudasDisponiveis = obterJogudasDisponiveis(tabuleiro);</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        if (jogudasDisponiveis.isEmpty()) {</span>
+<span class="nc" id="L31">            throw new IllegalStateException(&quot;Nenhuma posição disponível no tabuleiro!&quot;);</span>
+        }
+
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        for (int[] jogada : jogudasDisponiveis) {</span>
+<span class="fc" id="L35">            tabuleiro.marcarPosicao(jogada[0], jogada[1], simboloJogador);</span>
+<span class="fc" id="L36">            int score = minimax(tabuleiro, 0, false, simboloJogador, simboloOponente);</span>
+<span class="fc" id="L37">            tabuleiro.obterCelula(jogada[0], jogada[1]).limpar();</span>
+
+<span class="fc bfc" id="L39" title="All 2 branches covered.">            if (score &gt; melhorScore) {</span>
+<span class="fc" id="L40">                melhorScore = score;</span>
+<span class="fc" id="L41">                melhorJogada = jogada;</span>
+            }
+<span class="fc" id="L43">        }</span>
+
+<span class="fc" id="L45">        return melhorJogada;</span>
+    }
+
+    /**
+     * Algoritmo Minimax para avaliação de posições.
+     *
+     * @param tabuleiro tabuleiro atual
+     * @param profundidade profundidade da recursão
+     * @param isMaximizing true se é turno do maximizador
+     * @param simboloJogador símbolo do jogador IA
+     * @param simboloOponente símbolo do oponente
+     * @return score da posição
+     */
+    private int minimax(Tabuleiro tabuleiro, int profundidade, boolean isMaximizing, char simboloJogador, char simboloOponente) {
+        // Verificar estados terminais
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        if (verificarVitoria(tabuleiro, simboloJogador)) {</span>
+<span class="fc" id="L61">            return 10 - profundidade; // Ganhar logo é melhor</span>
+        }
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (verificarVitoria(tabuleiro, simboloOponente)) {</span>
+<span class="fc" id="L64">            return profundidade - 10; // Perder logo é pior</span>
+        }
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        if (tabuleiro.estaCheia()) {</span>
+<span class="fc" id="L67">            return 0; // Empate</span>
+        }
+
+<span class="fc bfc" id="L70" title="All 2 branches covered.">        if (isMaximizing) {</span>
+<span class="fc" id="L71">            int melhorScore = Integer.MIN_VALUE;</span>
+<span class="fc" id="L72">            List&lt;int[]&gt; jogudasDisponiveis = obterJogudasDisponiveis(tabuleiro);</span>
+<span class="fc bfc" id="L73" title="All 2 branches covered.">            for (int[] jogada : jogudasDisponiveis) {</span>
+<span class="fc" id="L74">                tabuleiro.marcarPosicao(jogada[0], jogada[1], simboloJogador);</span>
+<span class="fc" id="L75">                int score = minimax(tabuleiro, profundidade + 1, false, simboloJogador, simboloOponente);</span>
+<span class="fc" id="L76">                tabuleiro.obterCelula(jogada[0], jogada[1]).limpar();</span>
+<span class="fc" id="L77">                melhorScore = Math.max(score, melhorScore);</span>
+<span class="fc" id="L78">            }</span>
+<span class="fc" id="L79">            return melhorScore;</span>
+        } else {
+<span class="fc" id="L81">            int melhorScore = Integer.MAX_VALUE;</span>
+<span class="fc" id="L82">            List&lt;int[]&gt; jogudasDisponiveis = obterJogudasDisponiveis(tabuleiro);</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">            for (int[] jogada : jogudasDisponiveis) {</span>
+<span class="fc" id="L84">                tabuleiro.marcarPosicao(jogada[0], jogada[1], simboloOponente);</span>
+<span class="fc" id="L85">                int score = minimax(tabuleiro, profundidade + 1, true, simboloJogador, simboloOponente);</span>
+<span class="fc" id="L86">                tabuleiro.obterCelula(jogada[0], jogada[1]).limpar();</span>
+<span class="fc" id="L87">                melhorScore = Math.min(score, melhorScore);</span>
+<span class="fc" id="L88">            }</span>
+<span class="fc" id="L89">            return melhorScore;</span>
+        }
+    }
+
+    /**
+     * Verifica se um jogador venceu.
+     *
+     * @param tabuleiro tabuleiro
+     * @param simbolo símbolo do jogador
+     * @return true se o jogador venceu
+     */
+    private boolean verificarVitoria(Tabuleiro tabuleiro, char simbolo) {
+        // Verificar linhas
+<span class="fc bfc" id="L102" title="All 2 branches covered.">        for (int i = 0; i &lt; 3; i++) {</span>
+<span class="fc bfc" id="L103" title="All 2 branches covered.">            if (tabuleiro.obterSimbolo(i, 0) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L104" title="All 2 branches covered.">                tabuleiro.obterSimbolo(i, 1) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L105" title="All 2 branches covered.">                tabuleiro.obterSimbolo(i, 2) == simbolo) {</span>
+<span class="fc" id="L106">                return true;</span>
+            }
+        }
+        // Verificar colunas
+<span class="fc bfc" id="L110" title="All 2 branches covered.">        for (int j = 0; j &lt; 3; j++) {</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">            if (tabuleiro.obterSimbolo(0, j) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L112" title="All 2 branches covered.">                tabuleiro.obterSimbolo(1, j) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L113" title="All 2 branches covered.">                tabuleiro.obterSimbolo(2, j) == simbolo) {</span>
+<span class="fc" id="L114">                return true;</span>
+            }
+        }
+        // Verificar diagonais
+<span class="fc bfc" id="L118" title="All 2 branches covered.">        if (tabuleiro.obterSimbolo(0, 0) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L119" title="All 2 branches covered.">            tabuleiro.obterSimbolo(1, 1) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">            tabuleiro.obterSimbolo(2, 2) == simbolo) {</span>
+<span class="fc" id="L121">            return true;</span>
+        }
+<span class="fc bfc" id="L123" title="All 2 branches covered.">        if (tabuleiro.obterSimbolo(0, 2) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">            tabuleiro.obterSimbolo(1, 1) == simbolo &amp;&amp; </span>
+<span class="fc bfc" id="L125" title="All 2 branches covered.">            tabuleiro.obterSimbolo(2, 0) == simbolo) {</span>
+<span class="fc" id="L126">            return true;</span>
+        }
+<span class="fc" id="L128">        return false;</span>
+    }
+
+    /**
+     * Obtém todas as posições disponíveis.
+     *
+     * @param tabuleiro tabuleiro
+     * @return lista de movimentos disponíveis
+     */
+    private List&lt;int[]&gt; obterJogudasDisponiveis(Tabuleiro tabuleiro) {
+<span class="fc" id="L138">        List&lt;int[]&gt; jogadas = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L139" title="All 2 branches covered.">        for (int i = 0; i &lt; tabuleiro.obterTamanho(); i++) {</span>
+<span class="fc bfc" id="L140" title="All 2 branches covered.">            for (int j = 0; j &lt; tabuleiro.obterTamanho(); j++) {</span>
+<span class="fc bfc" id="L141" title="All 2 branches covered.">                if (tabuleiro.posicaoDisponivel(i, j)) {</span>
+<span class="fc" id="L142">                    jogadas.add(new int[]{i, j});</span>
+                }
+            }
+        }
+<span class="fc" id="L146">        return jogadas;</span>
+    }
+
+    @Override
+    public String obterNome() {
+<span class="fc" id="L151">        return nome;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

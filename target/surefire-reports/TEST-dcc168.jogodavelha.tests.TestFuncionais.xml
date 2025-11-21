@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dcc168.jogodavelha.tests.TestFuncionais" time="0.151" tests="53" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/test-classes:/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/21.0.9-ms/lib"/>
+    <property name="sun.java.command" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar /workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire 2025-11-21T19-26-14_476-jvmRun1 surefire8868650027823488663tmp surefire_03842347144863771461tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/test-classes:/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/codespace"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="/usr/local/sdkman/candidates/java/21.0.9-ms"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.real.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+10-LTS"/>
+    <property name="user.name" value="codespace"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.8.0-1030-azure"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Microsoft-12574458"/>
+    <property name="localRepository" value="/home/codespace/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="21.0.9+10-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testGameStateTransitionToVictoryO" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testGameStateTransitionToVictoryX" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testResetGameRestartsState" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.002"/>
+  <testcase name="testStartGameWithoutPlayers" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardCreationIsEmpty" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testNoVictoryPartialRow" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testPlayerInvalidSymbol" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testVictoryXThirdColumn" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testPlayerCreationO" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testPlayerCreationX" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testValidStateEmptyBoard" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testCompleteGameFlowRandomVsRandom" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.006"/>
+  <testcase name="testCellInvalidSymbol" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoundaryConditionBoardEdges" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testCellValidSymbolO" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testCellValidSymbolX" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testGetCurrentPlayerReturnsCorrectPlayer" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testRandomAINoAvailableMoves" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testStartGameWithTwoPlayers" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testGetBoardReturnsValidBoard" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testAddThreePlayers" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testVictoryXFirstRow" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testGameStateValues" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardNotFullInitial" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoundaryConditionBoardCorners" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testDrawDetection" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardNotFullWithEightMarks" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardMarkOccupiedPosition" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testPlayerSymbolComparison" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testGetCurrentPlayerIndexInitiallyZero" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardInvalidCoordinatesOverflow" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testVictoryOSecondRow" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testMinimaxAIMakesValidMove" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.106"/>
+  <testcase name="testVictoryAntiDiagonalO" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.001"/>
+  <testcase name="testCompleteGameFlowMinimaxVsRandom" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.001"/>
+  <testcase name="testBoundaryConditionBoardCenter" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testNoVictoryMixedSymbols" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardInvalidCoordinatesNegative" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardFullAfterNineMarks" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testValidStateWithMarks" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testRandomAIMakeValidMove" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testVictoryOSecondColumn" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.001"/>
+  <testcase name="testNoVictoryEmptyBoard" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.001"/>
+  <testcase name="testVictoryMainDiagonalX" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.001"/>
+  <testcase name="testCellEmptySymbol" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.002"/>
+  <testcase name="testNoDraw" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testAddTwoPlayers" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testVictoryXThirdRow" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testVictoryXFirstColumn" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testMinimaxAIBlocksOpponentVictory" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.009"/>
+  <testcase name="testBoardMarkPositionO" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testBoardMarkPositionX" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0"/>
+  <testcase name="testGameStateTransitionToDraw" classname="dcc168.jogodavelha.tests.TestFuncionais" time="0.001"/>
+</testsuite>
