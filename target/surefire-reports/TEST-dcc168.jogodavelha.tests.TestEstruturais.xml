@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dcc168.jogodavelha.tests.TestEstruturais" time="0.27" tests="45" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dcc168.jogodavelha.tests.TestEstruturais" time="0.374" tests="45" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/21.0.9-ms/lib"/>
-    <property name="sun.java.command" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar /workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire 2025-11-21T19-26-14_476-jvmRun1 surefire8868650027823488663tmp surefire_03842347144863771461tmp"/>
+    <property name="sun.java.command" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter15024741163652069732.jar /workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire 2025-11-23T16-26-06_000-jvmRun1 surefire5183114355621297078tmp surefire_011051243114933311592tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/test-classes:/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar"/>
+    <property name="surefire.real.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter15024741163652069732.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+10-LTS"/>
     <property name="user.name" value="codespace"/>
@@ -53,49 +53,49 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGameStateFromCodeAguardandoJogada" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.015"/>
+  <testcase name="testGameStateFromCodeAguardandoJogada" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.014"/>
   <testcase name="testCellClear" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testBoardMarkPositionMultiple" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testValidatorCheckDrawCondition" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testBoardIsFullFalseWithThreeMarks" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testGameControllerAddPlayerAndGetList" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
-  <testcase name="testGameControllerGetCurrentPlayerIndex" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.005"/>
+  <testcase name="testGameControllerAddPlayerAndGetList" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.018"/>
+  <testcase name="testGameControllerGetCurrentPlayerIndex" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
   <testcase name="testCellIsEmptyFalse" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testGameControllerGetBoard" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testBoardGetCells" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testBoardGetCells" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testGameControllerSetCurrentState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testConsoleViewDisplayGameState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testConsoleViewDisplayGameState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.007"/>
   <testcase name="testPlayerGetSymbol" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testValidatorIsValidStateTrueEmpty" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testGameControllerStartGameSetsState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testBoardToString" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testValidatorCheckAntiDiagonal" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.003"/>
+  <testcase name="testValidatorCheckAntiDiagonal" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testRandomAIMakeMoveValidCoordinates" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testRandomAIMakeMoveReturnsArray" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testGameControllerIsGameOverTrueAfterState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testValidatorCheckDrawNoVictory" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testCellIsEmptyTrue" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testValidatorCheckDrawNoVictory" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.007"/>
+  <testcase name="testCellIsEmptyTrue" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testCellGetSymbolAfterSet" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testValidatorCheckMainDiagonal" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testValidatorCheckMainDiagonal" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testPlayerGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testGameStateFromCodeVitoriaO" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testGameStateFromCodeVitoriaX" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testConsoleViewDisplayMessage" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.003"/>
-  <testcase name="testValidatorCheckVictoryAllColumns" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.006"/>
+  <testcase name="testConsoleViewDisplayMessage" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testValidatorCheckVictoryAllColumns" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.018"/>
   <testcase name="testPlayerIsMySymbolTrue" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
-  <testcase name="testPlayerIsMySymbolFalse" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
+  <testcase name="testPlayerIsMySymbolFalse" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testCellToString" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testGameControllerIsGameOverFalseInitial" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testMinimaxAIMakeMoveReturnsValidPosition" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.086"/>
-  <testcase name="testRandomAIGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testBoardGetCell" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testGameControllerIsGameOverFalseInitial" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testMinimaxAIMakeMoveReturnsValidPosition" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.098"/>
+  <testcase name="testRandomAIGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testBoardGetCell" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.002"/>
   <testcase name="testBoardGetSize" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
   <testcase name="testMinimaxAIGetName" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testValidatorCheckVictoryAllRows" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testBoardPositionAvailableAfterClear" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testBoardPositionAvailableAfterClear" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
   <testcase name="testBoardResetClearsBoardCompletely" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
-  <testcase name="testGameStateFromCodeEmpate" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
+  <testcase name="testGameStateFromCodeEmpate" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
   <testcase name="testConsoleViewDisplayBoard" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.003"/>
-  <testcase name="testGameControllerGetCurrentState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
+  <testcase name="testGameControllerGetCurrentState" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0.001"/>
   <testcase name="testValidatorIsValidStateWithVictory" classname="dcc168.jogodavelha.tests.TestEstruturais" time="0"/>
 </testsuite>

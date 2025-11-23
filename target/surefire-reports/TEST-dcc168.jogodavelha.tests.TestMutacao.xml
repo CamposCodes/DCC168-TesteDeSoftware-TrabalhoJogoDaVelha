@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dcc168.jogodavelha.tests.TestMutacao" time="0.023" tests="38" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="dcc168.jogodavelha.tests.TestMutacao" time="0.016" tests="38" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="21"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/local/sdkman/candidates/java/21.0.9-ms/lib"/>
-    <property name="sun.java.command" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar /workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire 2025-11-21T19-26-14_476-jvmRun1 surefire8868650027823488663tmp surefire_03842347144863771461tmp"/>
+    <property name="sun.java.command" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter15024741163652069732.jar /workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire 2025-11-23T16-26-06_000-jvmRun1 surefire5183114355621297078tmp surefire_011051243114933311592tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/test-classes:/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/classes:/home/codespace/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/codespace/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter210681816931696782.jar"/>
+    <property name="surefire.real.class.path" value="/workspaces/DCC168-TesteDeSoftware-TrabalhoJogoDaVelha/target/surefire/surefirebooter15024741163652069732.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.9+10-LTS"/>
     <property name="user.name" value="codespace"/>
@@ -53,7 +53,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGameControllerPlayerAlternation" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.006"/>
+  <testcase name="testGameControllerPlayerAlternation" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testCellSymbolEqualityO" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testCellSymbolEqualityX" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testVictoryRowIndexZero" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
@@ -70,24 +70,24 @@
   <testcase name="testBoardInvalidCoordinateOverflowRow" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testGameControllerGameOverCheck" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testBoardValidCoordinateBoundaryLowerX" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testValidatorDrawReturnsFalseWhenVictory" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.002"/>
+  <testcase name="testValidatorDrawReturnsFalseWhenVictory" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testValidatorStateValidityDoesNotAllowDoubleVictory" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testBoardValidCoordinateBoundaryUpperX" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testValidatorDrawReturnsTrueOnlyWhenBoardFullAndNoVictory" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
+  <testcase name="testValidatorDrawReturnsTrueOnlyWhenBoardFullAndNoVictory" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.001"/>
   <testcase name="testBoardAllPositionsAreSize3" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testVictoryDiagonalAntiExactPositions" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testBoardLoopsAllCells" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testValidatorStateValidityWhenEmpty" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.004"/>
+  <testcase name="testBoardLoopsAllCells" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.003"/>
+  <testcase name="testValidatorStateValidityWhenEmpty" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testBoardIsEmptyNotFilledInitially" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testRandomAIAvailableMovesCountCorrect" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testGameControllerGetWinnerO" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testGameControllerGetWinnerX" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testCellInvalidSymbolRejectsAll" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testGameStateCodesAreCorrect" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.002"/>
-  <testcase name="testVictoryCheckLoopsAllColumns" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.003"/>
+  <testcase name="testGameStateCodesAreCorrect" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
+  <testcase name="testVictoryCheckLoopsAllColumns" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testBoardInvalidCoordinateNegativeCol" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testBoardInvalidCoordinateNegativeRow" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
-  <testcase name="testVictoryDiagonalMainExactPositions" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
+  <testcase name="testBoardInvalidCoordinateNegativeRow" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.001"/>
+  <testcase name="testVictoryDiagonalMainExactPositions" classname="dcc168.jogodavelha.tests.TestMutacao" time="0.002"/>
   <testcase name="testPlayerSymbolValidationAnd" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testGameControllerGetWinnerNull" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
   <testcase name="testMinimaxScoresAreDifferent" classname="dcc168.jogodavelha.tests.TestMutacao" time="0"/>
