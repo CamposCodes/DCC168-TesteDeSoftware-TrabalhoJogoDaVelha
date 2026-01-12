@@ -1,5 +1,8 @@
 package dcc168.jogodavelha.strategy;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dcc168.jogodavelha.model.Tabuleiro;
 
 /**
@@ -25,5 +28,22 @@ public interface EstrategiaJogador {
      * @return nome do jogador
      */
     String obterNome();
+    /**
+     * Obtém todas as posições disponíveis no tabuleiro.
+     *
+     * @param tabuleiro tabuleiro atual
+     * @return lista de posições disponíveis [linha, coluna]
+     */
+    public static List<int[]> obterJogadasDisponiveis(Tabuleiro tabuleiro) {
+        List<int[]> jogadas = new ArrayList<>();
+        for (int i = 0; i < tabuleiro.obterTamanho(); i++) {
+            for (int j = 0; j < tabuleiro.obterTamanho(); j++) {
+                if (tabuleiro.posicaoDisponivel(i, j)) {
+                    jogadas.add(new int[]{i, j});
+                }
+            }
+        }
+        return jogadas;
+    }
 }
 

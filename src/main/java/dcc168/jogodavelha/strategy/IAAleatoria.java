@@ -50,7 +50,7 @@ public class IAAleatoria implements EstrategiaJogador {
      * @param tabuleiro tabuleiro atual
      * @return lista de posições disponíveis [linha, coluna]
      */
-    private List<int[]> obterJogadasDisponiveis(Tabuleiro tabuleiro) {
+    public List<int[]> obterJogadasDisponiveis(Tabuleiro tabuleiro) {
         List<int[]> jogadas = new ArrayList<>();
         for (int i = 0; i < tabuleiro.obterTamanho(); i++) {
             for (int j = 0; j < tabuleiro.obterTamanho(); j++) {
