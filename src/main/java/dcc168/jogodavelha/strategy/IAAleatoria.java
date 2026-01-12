@@ -35,7 +35,7 @@ public class IAAleatoria implements EstrategiaJogador {
 
     @Override
     public int[] fazerJogada(Tabuleiro tabuleiro, char simboloJogador) {
-        List<int[]> jogudasDisponiveis = obterJogudasDisponiveis(tabuleiro);
+        List<int[]> jogudasDisponiveis = obterJogadasDisponiveis(tabuleiro);
         
         if (jogudasDisponiveis.isEmpty()) {
             throw new IllegalStateException("Nenhuma posição disponível no tabuleiro!");
@@ -50,7 +50,7 @@ public class IAAleatoria implements EstrategiaJogador {
      * @param tabuleiro tabuleiro atual
      * @return lista de posições disponíveis [linha, coluna]
      */
-    private List<int[]> obterJogudasDisponiveis(Tabuleiro tabuleiro) {
+    private List<int[]> obterJogadasDisponiveis(Tabuleiro tabuleiro) {
         List<int[]> jogadas = new ArrayList<>();
         for (int i = 0; i < tabuleiro.obterTamanho(); i++) {
             for (int j = 0; j < tabuleiro.obterTamanho(); j++) {
